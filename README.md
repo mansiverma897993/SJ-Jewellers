@@ -22,6 +22,9 @@ cd SJ-Jewellers
 2️⃣ Install dependencies
 npm install
 
+🏗️ Build for Production
+npm run build
+
 3️⃣ Start the development server
 npm run dev
 
