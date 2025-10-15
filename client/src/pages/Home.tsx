@@ -22,7 +22,9 @@ export default function Home() {
   });
 
   const { data: products, isLoading: productsLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products", selectedCategory?.id],
+    queryKey: selectedCategory 
+      ? [`/api/products?categoryId=${selectedCategory.id}`]
+      : ["/api/products"],
     enabled: !!selectedCategory,
   });
 
